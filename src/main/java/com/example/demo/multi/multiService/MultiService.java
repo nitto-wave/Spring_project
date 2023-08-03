@@ -1,4 +1,4 @@
-package com.example.demo.multi;
+package com.example.demo.multi.multiService;
 
 import org.springframework.stereotype.Service;
 
@@ -10,7 +10,5 @@ public class MultiService {
 		int result = num1 * num2;
 
 		return result;
-
 	}
-
 }
