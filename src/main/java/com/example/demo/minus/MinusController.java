@@ -20,7 +20,7 @@ public class MinusController {
 
 		int result = num1 - num2;
 		model.addAttribute("result", result);
-
+		
 		return "minusResult";
 	}
 }
