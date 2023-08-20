@@ -16,18 +16,19 @@ public class MinusController {
 	}
 
 	@PostMapping("/minusResult")
-	public String doPost(@RequestParam(required = false) Integer num1, @RequestParam(required = false) Integer num2, Model model) throws Exception {
+	public String doPost(@RequestParam(required = false) Integer num1, @RequestParam(required = false) Integer num2,
+			Model model) throws Exception {
 
 		MinusService minusService = new MinusService();
 
-        try {
-        	
-            int result = minusService.minus(num1, num2);
-            model.addAttribute("result", result);
-        } catch (Exception e) {
-        	
-            model.addAttribute("error", e.getMessage());
-        }
-        return "minusResult";
+		try {
+
+			int result = minusService.minus(num1, num2);
+			model.addAttribute("result", result);
+		} catch (Exception e) {
+
+			model.addAttribute("error", e.getMessage());
+		}
+		return "minusResult";
 	}
 }
