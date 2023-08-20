@@ -8,13 +8,15 @@
 
 <body>
 	<h1>引き算</h1>
+	<p th:if="${error}" style="color: red;" th:text="${error}"></p>
+
 	<form action="/minusResult" method="post">
 		<input type="number" name="num1">
 		<span>-</span>
 		<input type="number" name="num2">
 		<button type="submit">=</button>
 	</form>
-	<p th:text="${result}"></p>
+	<p th:if="${result}" th:text="${result}"></p>
 </body>
 
 </html>

@@ -9,18 +9,25 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class MinusController {
 
-	@GetMapping("/minusFunction")
-	public String doGet() {
+	@GetMapping("/minusResult")
+	public String displayForm() {
 
-		return "minusFunction";
+		return "minusResult";
 	}
 
 	@PostMapping("/minusResult")
-	public String doGet(@RequestParam("num1") int num1, @RequestParam("num2") int num2, Model model) {
+	public String doPost(@RequestParam(required = false) Integer num1, @RequestParam(required = false) Integer num2, Model model) throws Exception {
 
-		int result = num1 - num2;
-		model.addAttribute("result", result);
-		
-		return "minusResult";
+		MinusService minusService = new MinusService();
+
+        try {
+        	
+            int result = minusService.minus(num1, num2);
+            model.addAttribute("result", result);
+        } catch (Exception e) {
+        	
+            model.addAttribute("error", e.getMessage());
+        }
+        return "minusResult";
 	}
 }
