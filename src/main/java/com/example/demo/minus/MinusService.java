@@ -9,6 +9,7 @@ public class MinusService {
 		if (num1 == null || num2 == null) {
 			throw new Exception("無効な演算です");
 		}
+		
 		return num1 - num2;
 	}
 }

@@ -22,15 +22,13 @@ public class CalculatorController {
 
 		try {
 
-			Integer result = calculatorService.calculator(num1, num2, operation);
+			int result = calculatorService.calculator(num1, num2, operation);
 
 			model.addAttribute("result", result);
-			return "calculatorResult";
 		} catch (Exception e) {
 
 			model.addAttribute("error", e.getMessage());
-
-			return "calculatorResult";
 		}
+		return "calculatorResult";
 	}
 }
