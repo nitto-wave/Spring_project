@@ -9,8 +9,8 @@
 <body>
 	<h1>計算機</h1>
 
-    <!-- エラーメッセージを表示するための部分 -->
-    <p th:if="${error}" style="color: red;" th:text="${error}"></p>
+	<!-- エラーメッセージを表示するための部分 -->
+	<p th:if="${error}" style="color: red;" th:text="${error}"></p>
 
 	<form action="/calculatorResult" method="post">
 		<input type="number" name="num1">
@@ -24,8 +24,8 @@
 		<button type="submit">=</button>
 	</form>
 
-    <!-- 結果を表示するための部分 -->
-    <p th:if="${result}" th:text="${result}"></p>
+	<!-- 結果を表示するための部分 -->
+	<p th:if="${result}" th:text="${result}"></p>
 </body>
 
 </html>

@@ -18,6 +18,7 @@ public class CalculatorService {
 		case "divide":
 
 			if (num2 == 0) {
+				
 				throw new Exception("0で割ることはできません。");
 			}
 

@@ -24,7 +24,7 @@ public class MinusController {
 		try {
 
 			int result = minusService.minus(num1, num2);
-			
+
 			model.addAttribute("result", result);
 		} catch (Exception e) {
 
